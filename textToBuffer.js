@@ -1,12 +1,6 @@
 function bufferToText(buffer) {
   const view = new DataView(buffer);
-  let str = '';
-  for (let i = 0; i < buffer.byteLength; i++) {
-    const c = String.fromCharCode(view.getUint8(i));
-    str += c;
-  }
-
-  return str;
+  return new Array(buffer.byteLength).fill(0).map((_, i) => String.fromCharCode(view.getUint8(i))).join("");
 }
 
 function textToBuffer(text) {
