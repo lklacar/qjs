@@ -1,0 +1,17 @@
+{
+  "name": "qjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "optimist": "^0.6.1",
+    "underscore": "^1.9.1",
+    "winston": "^3.1.0",
+    "ws": "2.3.1"
+  }
+}
