@@ -18,7 +18,12 @@ const messageOptions = {
 ws.binaryType = "binary";
 ws.on('open', function (res) {
 
+  // ws.send(textToBuffer("heartbeat ComeOn"), messageOptions, null);
+
   ws.send(textToBuffer("heartbeat ComeOn"), messageOptions, null);
+  setInterval(function() {
+    ws.send(textToBuffer("heartbeat ComeOn"), messageOptions, null);
+  }, 60000)
 
   ws.on('message', function (res) {
     const view = Uint8Array.from(res);
